@@ -32,19 +32,19 @@
             this.lblSeleccionar = new System.Windows.Forms.Label();
             this.cmbRubro = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblLink = new System.Windows.Forms.LinkLabel();
+            this.btnExportarDatos = new System.Windows.Forms.Button();
+            this.lblTotalStock = new System.Windows.Forms.Label();
+            this.lblCantiArticulos = new System.Windows.Forms.Label();
+            this.lblTotalValorStock = new System.Windows.Forms.Label();
+            this.lblCantidadArticulos = new System.Windows.Forms.Label();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.lblCantidadArticulos = new System.Windows.Forms.Label();
-            this.lblTotalValorStock = new System.Windows.Forms.Label();
-            this.lblCantiArticulos = new System.Windows.Forms.Label();
-            this.lblTotalStock = new System.Windows.Forms.Label();
-            this.btnExportarDatos = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.lblLink);
             this.groupBox1.Controls.Add(this.btnExportarDatos);
             this.groupBox1.Controls.Add(this.lblTotalStock);
             this.groupBox1.Controls.Add(this.lblCantiArticulos);
@@ -96,6 +96,71 @@
             this.groupBox1.Size = new System.Drawing.Size(577, 556);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // lblLink
+            // 
+            this.lblLink.AutoSize = true;
+            this.lblLink.Location = new System.Drawing.Point(6, 520);
+            this.lblLink.Name = "lblLink";
+            this.lblLink.Size = new System.Drawing.Size(123, 13);
+            this.lblLink.TabIndex = 9;
+            this.lblLink.TabStop = true;
+            this.lblLink.Text = "Acerca del Desarrollador";
+            this.lblLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLink_LinkClicked);
+            // 
+            // btnExportarDatos
+            // 
+            this.btnExportarDatos.Location = new System.Drawing.Point(360, 492);
+            this.btnExportarDatos.Name = "btnExportarDatos";
+            this.btnExportarDatos.Size = new System.Drawing.Size(86, 26);
+            this.btnExportarDatos.TabIndex = 8;
+            this.btnExportarDatos.Text = "Exportar Datos";
+            this.btnExportarDatos.UseVisualStyleBackColor = true;
+            this.btnExportarDatos.Click += new System.EventHandler(this.btnExportarDatos_Click);
+            // 
+            // lblTotalStock
+            // 
+            this.lblTotalStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalStock.Location = new System.Drawing.Point(138, 477);
+            this.lblTotalStock.Name = "lblTotalStock";
+            this.lblTotalStock.Size = new System.Drawing.Size(110, 22);
+            this.lblTotalStock.TabIndex = 7;
+            // 
+            // lblCantiArticulos
+            // 
+            this.lblCantiArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantiArticulos.Location = new System.Drawing.Point(138, 432);
+            this.lblCantiArticulos.Name = "lblCantiArticulos";
+            this.lblCantiArticulos.Size = new System.Drawing.Size(110, 22);
+            this.lblCantiArticulos.TabIndex = 6;
+            // 
+            // lblTotalValorStock
+            // 
+            this.lblTotalValorStock.AutoSize = true;
+            this.lblTotalValorStock.Location = new System.Drawing.Point(6, 478);
+            this.lblTotalValorStock.Name = "lblTotalValorStock";
+            this.lblTotalValorStock.Size = new System.Drawing.Size(89, 13);
+            this.lblTotalValorStock.TabIndex = 5;
+            this.lblTotalValorStock.Text = "Total valor stock:";
+            // 
+            // lblCantidadArticulos
+            // 
+            this.lblCantidadArticulos.AutoSize = true;
+            this.lblCantidadArticulos.Location = new System.Drawing.Point(6, 433);
+            this.lblCantidadArticulos.Name = "lblCantidadArticulos";
+            this.lblCantidadArticulos.Size = new System.Drawing.Size(110, 13);
+            this.lblCantidadArticulos.TabIndex = 4;
+            this.lblCantidadArticulos.Text = "Cantidad de Articulos:";
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(360, 57);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(86, 26);
+            this.btnConsultar.TabIndex = 3;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvArticulos
             // 
@@ -136,69 +201,6 @@
             this.Column5.HeaderText = "Valor en Stock";
             this.Column5.Name = "Column5";
             // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Location = new System.Drawing.Point(360, 57);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(86, 26);
-            this.btnConsultar.TabIndex = 3;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // lblCantidadArticulos
-            // 
-            this.lblCantidadArticulos.AutoSize = true;
-            this.lblCantidadArticulos.Location = new System.Drawing.Point(6, 433);
-            this.lblCantidadArticulos.Name = "lblCantidadArticulos";
-            this.lblCantidadArticulos.Size = new System.Drawing.Size(110, 13);
-            this.lblCantidadArticulos.TabIndex = 4;
-            this.lblCantidadArticulos.Text = "Cantidad de Articulos:";
-            // 
-            // lblTotalValorStock
-            // 
-            this.lblTotalValorStock.AutoSize = true;
-            this.lblTotalValorStock.Location = new System.Drawing.Point(6, 478);
-            this.lblTotalValorStock.Name = "lblTotalValorStock";
-            this.lblTotalValorStock.Size = new System.Drawing.Size(89, 13);
-            this.lblTotalValorStock.TabIndex = 5;
-            this.lblTotalValorStock.Text = "Total valor stock:";
-            // 
-            // lblCantiArticulos
-            // 
-            this.lblCantiArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantiArticulos.Location = new System.Drawing.Point(138, 432);
-            this.lblCantiArticulos.Name = "lblCantiArticulos";
-            this.lblCantiArticulos.Size = new System.Drawing.Size(110, 22);
-            this.lblCantiArticulos.TabIndex = 6;
-            // 
-            // lblTotalStock
-            // 
-            this.lblTotalStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotalStock.Location = new System.Drawing.Point(138, 477);
-            this.lblTotalStock.Name = "lblTotalStock";
-            this.lblTotalStock.Size = new System.Drawing.Size(110, 22);
-            this.lblTotalStock.TabIndex = 7;
-            // 
-            // btnExportarDatos
-            // 
-            this.btnExportarDatos.Location = new System.Drawing.Point(360, 492);
-            this.btnExportarDatos.Name = "btnExportarDatos";
-            this.btnExportarDatos.Size = new System.Drawing.Size(86, 26);
-            this.btnExportarDatos.TabIndex = 8;
-            this.btnExportarDatos.Text = "Exportar Datos";
-            this.btnExportarDatos.UseVisualStyleBackColor = true;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(20, 531);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // frmVentaEquiposInformaticos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,7 +235,7 @@
         private System.Windows.Forms.Label lblTotalValorStock;
         private System.Windows.Forms.Label lblCantidadArticulos;
         private System.Windows.Forms.Button btnExportarDatos;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblLink;
     }
 }
 
